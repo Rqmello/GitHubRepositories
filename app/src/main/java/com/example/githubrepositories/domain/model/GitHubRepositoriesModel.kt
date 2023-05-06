@@ -19,6 +19,7 @@ data class Item(
 )
 
 data class Owner(
+    val login: String,
     val id: Int,
     val avatar_url: String,
     val gravatar_id: String,
