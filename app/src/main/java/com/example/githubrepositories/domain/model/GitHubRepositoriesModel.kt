@@ -2,7 +2,6 @@ package com.example.githubrepositories.domain.model
 
 data class GitHubRepositoriesModel(
     val total_count: Int,
-    val incomplete_results: Boolean,
     val items: List<Item>
 )
 
@@ -12,7 +11,6 @@ data class Item(
     val owner: Owner,
     val html_url: String,
     val description: String,
-    val url: String,
     val stargazers_count: Int,
     val forks_count: Int,
     val forks: Int,
@@ -21,6 +19,5 @@ data class Item(
 data class Owner(
     val login: String,
     val id: Int,
-    val avatar_url: String,
-    val gravatar_id: String,
+    val avatar_url: String
 )

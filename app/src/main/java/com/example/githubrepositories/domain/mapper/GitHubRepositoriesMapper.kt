@@ -16,16 +16,13 @@ fun GitHubRepositoriesResponse.toModel(): GitHubRepositoriesModel {
                     login = it.owner.login,
                     id = it.owner.id,
                     avatar_url = it.owner.avatarUrl,
-                    gravatar_id = it.owner.gravatarId
                 ),
                 html_url = it.htmlUrl,
                 description = it.description,
-                url = it.url,
                 stargazers_count = it.stargazersCount,
                 forks_count = it.forksCount,
                 forks = it.forks
             )
         },
-        incomplete_results = incompleteResults
     )
 }
