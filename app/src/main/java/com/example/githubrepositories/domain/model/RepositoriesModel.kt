@@ -1,6 +1,6 @@
 package com.example.githubrepositories.domain.model
 
-data class GitHubRepositoriesModel(
+data class RepositoriesModel(
     val total_count: Int,
     val items: List<Item>
 )
