@@ -3,7 +3,7 @@ package com.example.githubrepositories.domain.mapper
 import com.example.githubrepositories.data.remote.response.GitHubRepositoriesResponse
 import com.example.githubrepositories.domain.model.GitHubRepositoriesModel
 import com.example.githubrepositories.domain.model.Item
-import com.example.githubrepositories.domain.model.Owner
+import com.example.githubrepositories.domain.model.UserModel
 
 fun GitHubRepositoriesResponse.toModel(): GitHubRepositoriesModel {
     return GitHubRepositoriesModel(
@@ -12,7 +12,7 @@ fun GitHubRepositoriesResponse.toModel(): GitHubRepositoriesModel {
             Item(
                 name = it.name,
                 full_name = it.fullName,
-                owner = Owner(
+                userModel = UserModel(
                     login = it.owner.login,
                     id = it.owner.id,
                     avatar_url = it.owner.avatarUrl,

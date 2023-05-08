@@ -8,7 +8,7 @@ data class GitHubRepositoriesModel(
 data class Item(
     val name: String,
     val full_name: String,
-    val owner: Owner,
+    val userModel: UserModel,
     val html_url: String,
     val description: String,
     val stargazers_count: Int,
@@ -16,7 +16,7 @@ data class Item(
     val forks: Int,
 )
 
-data class Owner(
+data class UserModel(
     val login: String,
     val id: Int,
     val avatar_url: String

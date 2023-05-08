@@ -14,7 +14,7 @@ data class ItemResponse(
     @SerializedName("name") val name: String,
     @SerializedName("full_name") val fullName: String,
     @SerializedName("private") val `private`: Boolean,
-    @SerializedName("owner") val owner: OwnerResponse,
+    @SerializedName("owner") val owner: UserResponse,
     @SerializedName("html_url") val htmlUrl: String,
     @SerializedName("description") val description: String,
     @SerializedName("fork") val fork: Boolean,
@@ -91,7 +91,7 @@ data class ItemResponse(
     @SerializedName("score") val score: Double
 )
 
-data class OwnerResponse(
+data class UserResponse(
     @SerializedName("login") val login: String,
     @SerializedName("id") val id: Int,
     @SerializedName("node_id") val nodeId: String,
