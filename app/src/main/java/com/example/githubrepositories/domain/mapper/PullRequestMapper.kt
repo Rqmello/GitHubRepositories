@@ -12,7 +12,7 @@ fun PullRequestItemResponse.toModel(): PullRequestItemModel {
         usuario = UserModel(
             login = user.login,
             id = user.id,
-            avatar_url = user.avatarUrl
+            avatarUrl = user.avatarUrl
         )
     )
 }

@@ -2,22 +2,22 @@ package com.example.githubrepositories.domain.model
 
 data class RepositoriesModel(
     val total_count: Int,
-    val items: List<Item>
+    val items: List<ItemModel>
 )
 
-data class Item(
+data class ItemModel(
     val name: String,
-    val full_name: String,
+    val fullName: String,
     val userModel: UserModel,
-    val html_url: String,
+    val htmlUrl: String,
     val description: String,
-    val stargazers_count: Int,
-    val forks_count: Int,
+    val stargazersCount: Int,
+    val forksCount: Int,
     val forks: Int,
 )
 
 data class UserModel(
     val login: String,
     val id: Int,
-    val avatar_url: String
+    val avatarUrl: String
 )
