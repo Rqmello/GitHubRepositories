@@ -12,6 +12,6 @@ interface GitHubAPI {
         @Query("q") language: String,
         @Query("sort") sort: String,
         @Query("page") page: Int,
-    ): List<RepositoriesResponse>
+    ): RepositoriesResponse
 
 }

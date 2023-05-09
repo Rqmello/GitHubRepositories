@@ -9,7 +9,7 @@ class Repository : IRepository {
 
     private val api = HttpClient.retrofit.create(GitHubAPI::class.java)
 
-    override suspend fun getAllRepositories(language: String, sort: String, page: Int): List<RepositoriesResponse> {
+    override suspend fun getAllRepositories(language: String, sort: String, page: Int): RepositoriesResponse {
         return api.getAllRepositories(language, sort, page)
     }
 
