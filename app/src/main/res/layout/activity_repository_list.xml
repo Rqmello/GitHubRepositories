@@ -27,7 +27,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:gravity="center"
-        android:text="(Total de repositórios)"
+        tools:text="(Total de repositórios)"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:text="%1$d páginas"
+        android:text="Página:"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rv_repositories" />

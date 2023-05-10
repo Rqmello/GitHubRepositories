@@ -10,7 +10,7 @@ data class ItemModel(
     val fullName: String,
     val userModel: UserModel,
     val htmlUrl: String,
-    val description: String,
+    val description: String?,
     val stargazersCount: Int,
     val forksCount: Int,
     val forks: Int,
