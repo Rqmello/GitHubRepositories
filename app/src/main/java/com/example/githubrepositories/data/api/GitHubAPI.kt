@@ -17,9 +17,9 @@ interface GitHubAPI {
     ): RepositoriesResponse
 
     @GET("/repos/{criador}/{repositorio}/pulls")
-    suspend fun getAllPullsRepositories(
+    suspend fun getAllPullRequestOfRepository(
         @Path("criador") criador: String,
         @Path("repositorio") repositorio: String
-    ): PullRequestItemResponse
+    ): List<PullRequestItemResponse?>
 
 }

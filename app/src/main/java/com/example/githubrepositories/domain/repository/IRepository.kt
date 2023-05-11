@@ -8,5 +8,5 @@ interface IRepository {
 
     suspend fun getAllRepositories(language: String, sort: String, page: Int): RepositoriesModel
 
-    suspend fun getAllPullRepositories(criador: String, repositorio: String): PullRequestItemModel
+    suspend fun getAllPullRequestOfRepository(criador: String, repositorio: String): List<PullRequestItemModel?>
 }
