@@ -22,7 +22,7 @@ class ListRepositoriesActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel.resultLiveData.observe(this@ListRepositoriesActivity) {
             binding.rvRepositories.adapter = RepositoriesAdapter(it.items)
-            binding.tvGitHubRepositoriesItemTotalCount.text = it.total_count.toString()
+            binding.tvGitHubRepositoriesItemTotalCount.text = "Total de Repositórios: " + it.total_count.toString()
         }
 
         val linguagem = intent.extras?.getString("lang")

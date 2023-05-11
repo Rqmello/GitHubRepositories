@@ -30,7 +30,7 @@ class RepositoriesAdapter(private var list: List<ItemModel>) :
         fun org(item: ItemModel) {
             binding.tvGitHubRepositoriesItemName.text = item.name
             binding.tvGitHubRepositoriesItemFullName.text = item.fullName
-            binding.tvGitHubRepositoriesItemDescripton.text = item.description
+            binding.tvGitHubRepositoriesItemDescripton.text = "Descrição   " + item.description
             binding.tvGitHubRepositoriesItemStargazersCount.text = item.stargazersCount.toString()
             binding.tvGitHubRepositoriesItemForksCount.text = item.forks.toString()
             binding.tvGitHubRepositoriesItemLogin.text = item.userModel.login
