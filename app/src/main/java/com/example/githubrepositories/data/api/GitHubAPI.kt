@@ -18,8 +18,8 @@ interface GitHubAPI {
 
     @GET("/repos/{criador}/{repositorio}/pulls")
     suspend fun getAllPullsRepositories(
-        @Path("criador") login: String,
+        @Path("criador") criador: String,
         @Path("repositorio") repositorio: String
-    ): List<PullRequestItemResponse>
+    ): PullRequestItemResponse
 
 }
