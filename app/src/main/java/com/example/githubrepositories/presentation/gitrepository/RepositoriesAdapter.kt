@@ -1,11 +1,14 @@
 package com.example.githubrepositories.presentation.gitrepository
 
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.githubrepositories.databinding.ItemRepositoryBinding
 import com.example.githubrepositories.domain.model.ItemModel
+import com.example.githubrepositories.presentation.gitpullrequest.ListPullRequestActivity
 
 class RepositoriesAdapter(private var list: List<ItemModel>) :
     RecyclerView.Adapter<RepositoriesAdapter.RepositoriesViewHolder>() {
@@ -40,7 +43,15 @@ class RepositoriesAdapter(private var list: List<ItemModel>) :
                 .load(item.userModel.avatarUrl)
                 .into(binding.ivGitHubRepositoriesItemAvatar)
 
+            binding.clRepositoryItem.setOnClickListener {
+                val intent = Intent(binding.root.context, ListPullRequestActivity::class.java)
+                intent.putExtra("title", item.name)
+                intent.putExtra("login", item.userModel.login)
+                starsActivityPullRequest(intent)
+            }
+        }
+        private fun starsActivityPullRequest(intent: Intent) {
+            binding.root.context.startActivity(intent)
         }
     }
-
 }

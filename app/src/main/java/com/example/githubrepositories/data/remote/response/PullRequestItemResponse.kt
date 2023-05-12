@@ -15,7 +15,7 @@ data class PullRequestItemResponse(
     @SerializedName("locked") val locked: Boolean,
     @SerializedName("title") val title: String,
     @SerializedName("user") val user: UserResponse,
-    @SerializedName("body") val body: String,
+    @SerializedName("body") val body: String?,
     @SerializedName("created_at") val createdAt: String,
     @SerializedName("updated_at") val updatedAt: String,
     @SerializedName("closed_at") val closedAt: Any,

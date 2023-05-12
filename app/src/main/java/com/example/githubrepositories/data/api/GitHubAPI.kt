@@ -16,10 +16,10 @@ interface GitHubAPI {
         @Query("page") page: Int,
     ): RepositoriesResponse
 
-    @GET("/repos/{criador}/{repositorio}/pulls")
+    @GET("/repos/{login}/{title}/pulls")
     suspend fun getAllPullRequestOfRepository(
-        @Path("criador") criador: String,
-        @Path("repositorio") repositorio: String
+        @Path("login") criador: String,
+        @Path("title") repositorio: String
     ): List<PullRequestItemResponse?>
 
 }

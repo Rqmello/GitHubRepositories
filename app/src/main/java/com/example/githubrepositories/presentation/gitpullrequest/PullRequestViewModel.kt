@@ -12,14 +12,13 @@ class PullRequestViewModel : ViewModel() {
 
     private val repository = Repository()
 
-    private val resultMutableLiveData: MutableLiveData<List<PullRequestItemModel>> = MutableLiveData()
+    private val resultMutableLiveData: MutableLiveData<List<PullRequestItemModel?>> = MutableLiveData()
+    val resultLiveData: LiveData<List<PullRequestItemModel?>> = resultMutableLiveData
 
-    val resultLiveData: LiveData<List<PullRequestItemModel>> = resultMutableLiveData
-
-    fun getAllPullRequestOfRepository(criador: String, test: String) {
+    fun getAllPullRequestOfRepository(criador: String, repos: String) {
         viewModelScope.launch {
-            val result = repository.getAllPullRequestOfRepository(criador = criador, repositorio = test)
-            resultMutableLiveData.postValue(result as List<PullRequestItemModel>?)
+            val result = repository.getAllPullRequestOfRepository(criador = criador, repositorio = repos)
+            resultMutableLiveData.postValue(result)
         }
     }
 }

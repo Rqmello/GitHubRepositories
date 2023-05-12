@@ -18,8 +18,10 @@ class ListRepositoriesActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         _binding = ActivityRepositoryListBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         viewModel.resultLiveData.observe(this@ListRepositoriesActivity) {
             binding.rvRepositories.adapter = RepositoriesAdapter(it.items)
             binding.tvGitHubRepositoriesItemTotalCount.text = "Total de Repositórios: " + it.total_count.toString()
