@@ -29,7 +29,7 @@ class PullRequestAdapter(private var list: List<PullRequestItemModel?>) :
     inner class PullRequestViewHolder(private val binding: ItemPullRequestBinding) : RecyclerView.ViewHolder(binding.root){
 
        fun encaixar(item: PullRequestItemModel) {
-           binding.tvGitHubRepositoriesItemPullRequestDate.text = item.created_at
+           binding.tvGitHubRepositoriesItemPullRequestDate.text = "Criado em: " + item.created_at
            binding.tvGitHubRepositoriesItemPullRequestBody.text = item.body
            binding.tvGitHubRepositoriesItemPullRequestUsername.text = item.usuario.login
            binding.tvGitHubRepositoriesItemPullRequestTitle.text = item.title
