@@ -26,6 +26,8 @@
         <activity
             android:name=".presentation.gitrepository.ListRepositoriesActivity"
             android:exported="true" />
+        <activity android:name=".presentation.gitpullrequest.ListPullRequestActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>
