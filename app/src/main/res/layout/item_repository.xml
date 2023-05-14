@@ -23,6 +23,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/cl_repository_item"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -108,7 +109,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_git_hub_repositories_item_html_url"
                 tools:text="(Proprietário /Repositório)" />
 
-
             <TextView
                 android:id="@+id/tv_git_hub_repositories_item_html_url"
                 android:layout_width="0dp"
@@ -173,6 +173,7 @@
                 app:layout_constraintStart_toEndOf="@id/iv_git_hub_repositories_item_star"
                 app:layout_constraintTop_toTopOf="@id/iv_git_hub_repositories_item_star"
                 tools:text="(98)" />"
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

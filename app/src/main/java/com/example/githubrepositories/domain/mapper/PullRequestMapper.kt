@@ -8,6 +8,7 @@ fun PullRequestItemResponse.toModel(): PullRequestItemModel {
     return PullRequestItemModel(
         title = title,
         body = body,
+        htmlUrl = htmlUrl,
         created_at = createdAt,
         usuario = UserModel(
             login = user.login,

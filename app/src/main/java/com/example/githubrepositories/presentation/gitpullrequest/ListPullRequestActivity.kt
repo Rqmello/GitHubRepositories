@@ -1,8 +1,10 @@
 package com.example.githubrepositories.presentation.gitpullrequest
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import com.example.githubrepositories.databinding.ActivityPullRequestListBinding
 
 class ListPullRequestActivity : AppCompatActivity() {
@@ -15,8 +17,10 @@ class ListPullRequestActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         _binding = ActivityPullRequestListBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         viewModel.resultLiveData.observe(this@ListPullRequestActivity) {
             binding.rvPullRequest.adapter = PullRequestAdapter(it)
         }
@@ -26,6 +30,7 @@ class ListPullRequestActivity : AppCompatActivity() {
         val login = intent.getStringExtra("login")
         if (title != null && login != null) {
             viewModel.getAllPullRequestOfRepository(criador = login, repos = title)
+
         }
     }
 }
